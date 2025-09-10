@@ -10,7 +10,7 @@ import {
   Eye,
   Heart,
 } from "lucide-react";
-import logo from '/logo.png'
+import logo from "/logo.png";
 
 const Homepage = () => {
   const divisions = [
@@ -76,16 +76,22 @@ const Homepage = () => {
     >
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/50 z-10"></div>
-        <div
+        <div className="absolute inset-0 bg-gradient-to-r from-black/30 to-black/20 z-10"></div>
+        {/* <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
             backgroundImage:
               "url(/assets/treebg.png)",
           }}
+        ></div> */}
+        <div
+          className="absolute inset-0 bg-contain bg-center bg-no-repeat"
+          style={{
+            backgroundImage: "url(/assets/treebg.png)",
+          }}
         ></div>
 
-        <div className="relative z-20 text-center text-white max-w-4xl mx-auto px-4">
+        <div className="relative z-20 bg-white/90 text-center text-black max-w-4xl rounded-xl mx-auto px-4 py-4">
           <motion.h1
             initial={{ y: 50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
@@ -104,7 +110,7 @@ const Homepage = () => {
             initial={{ y: 30, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-xl md:text-2xl mb-12 leading-relaxed text-gray-200"
+            className="text-xl md:text-2xl mb-12 leading-relaxed text-black-200"
           >
             A premier conglomerate delivering excellence across automotive,
             marketing, and home solutions with unwavering commitment to quality
@@ -126,7 +132,7 @@ const Homepage = () => {
             </Link>
             <Link
               to="/contact"
-              className="border-2 border-white hover:bg-white hover:text-gray-900 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors"
+              className="border-2 bg-white  border-black hover:bg-[#d9d9d9]  hover:text-gray-900 text-black px-8 py-4 rounded-lg font-semibold text-lg transition-colors"
             >
               Get in Touch
             </Link>

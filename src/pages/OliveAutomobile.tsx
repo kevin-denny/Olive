@@ -1,52 +1,75 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Car, Wrench, Shield, Phone, Mail, ArrowRight } from 'lucide-react';
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import { Car, Wrench, Shield, Phone, Mail, ArrowRight } from "lucide-react";
+import logo from "/logo-automobile.png";
 
 const OliveAutomobile = () => {
   const [activeService, setActiveService] = useState(0);
 
   const services = [
     {
-      title: 'Automobile Sales',
-      description: 'Premium selection of new and certified pre-owned vehicles from leading manufacturers.',
+      title: "Automobile Sales",
+      description:
+        "Premium selection of new and certified pre-owned vehicles from leading manufacturers.",
       icon: Car,
-      features: ['New Car Sales', 'Certified Pre-owned', 'Financing Options', 'Trade-in Services']
+      features: [
+        "New Car Sales",
+        "Certified Pre-owned",
+        "Financing Options",
+        "Trade-in Services",
+      ],
     },
     {
-      title: 'Spare Parts',
-      description: 'Genuine and OEM spare parts with guaranteed quality and compatibility.',
+      title: "Spare Parts",
+      description:
+        "Genuine and OEM spare parts with guaranteed quality and compatibility.",
       icon: Shield,
-      features: ['Genuine Parts', 'OEM Components', 'Quality Assurance', 'Fast Delivery']
+      features: [
+        "Genuine Parts",
+        "OEM Components",
+        "Quality Assurance",
+        "Fast Delivery",
+      ],
     },
     {
-      title: 'Service Center',
-      description: 'Comprehensive automotive service and maintenance by certified technicians.',
+      title: "Service Center",
+      description:
+        "Comprehensive automotive service and maintenance by certified technicians.",
       icon: Wrench,
-      features: ['Routine Maintenance', 'Major Repairs', 'Diagnostics', 'Emergency Service']
-    }
+      features: [
+        "Routine Maintenance",
+        "Major Repairs",
+        "Diagnostics",
+        "Emergency Service",
+      ],
+    },
   ];
 
   const vehicles = [
     {
-      name: 'Premium Sedan',
-      image: 'https://images.pexels.com/photos/3802508/pexels-photo-3802508.jpeg?auto=compress&cs=tinysrgb&w=800',
-      price: 'Starting from $35,000'
+      name: "Premium Sedan",
+      image:
+        "https://images.pexels.com/photos/3802508/pexels-photo-3802508.jpeg?auto=compress&cs=tinysrgb&w=800",
+      price: "Starting from $35,000",
     },
     {
-      name: 'Luxury SUV',
-      image: 'https://images.pexels.com/photos/1429775/pexels-photo-1429775.jpeg?auto=compress&cs=tinysrgb&w=800',
-      price: 'Starting from $55,000'
+      name: "Luxury SUV",
+      image:
+        "https://images.pexels.com/photos/1429775/pexels-photo-1429775.jpeg?auto=compress&cs=tinysrgb&w=800",
+      price: "Starting from $55,000",
     },
     {
-      name: 'Sports Coupe',
-      image: 'https://images.pexels.com/photos/1335077/pexels-photo-1335077.jpeg?auto=compress&cs=tinysrgb&w=800',
-      price: 'Starting from $45,000'
+      name: "Sports Coupe",
+      image:
+        "https://images.pexels.com/photos/1335077/pexels-photo-1335077.jpeg?auto=compress&cs=tinysrgb&w=800",
+      price: "Starting from $45,000",
     },
     {
-      name: 'Electric Vehicle',
-      image: 'https://images.pexels.com/photos/3752169/pexels-photo-3752169.jpeg?auto=compress&cs=tinysrgb&w=800',
-      price: 'Starting from $42,000'
-    }
+      name: "Electric Vehicle",
+      image:
+        "https://images.pexels.com/photos/3752169/pexels-photo-3752169.jpeg?auto=compress&cs=tinysrgb&w=800",
+      price: "Starting from $42,000",
+    },
   ];
 
   return (
@@ -57,7 +80,7 @@ const OliveAutomobile = () => {
       className="min-h-screen pt-16"
     >
       {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-r from-blue-900 to-blue-800 text-white">
+      {/* <section className="relative py-20 bg-gradient-to-r from-blue-900 to-blue-800 text-white">
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
@@ -79,14 +102,21 @@ const OliveAutomobile = () => {
             </motion.p>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Services Section */}
-      <section className="py-20 bg-white">
+      <section className="py-12 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">Our Services</h2>
-            <p className="text-xl text-gray-600">Complete automotive solutions under one roof</p>
+            {/* <h2 className="text-4xl font-bold text-gray-900 mb-6">Our Services</h2> */}
+            <img
+              src={logo}
+              alt="Olive logo"
+              className="inline-block h-24 md:h-32 object-contain"
+            />
+            <p className="text-xl text-gray-600">
+              Complete automotive solutions under one roof
+            </p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -101,19 +131,25 @@ const OliveAutomobile = () => {
                     transition={{ duration: 0.6, delay: index * 0.1 }}
                     className={`p-6 rounded-xl cursor-pointer transition-all ${
                       activeService === index
-                        ? 'bg-blue-50 border-2 border-blue-500'
-                        : 'bg-gray-50 hover:bg-gray-100'
+                        ? "bg-blue-50 border-2 border-blue-500"
+                        : "bg-gray-50 hover:bg-gray-100"
                     }`}
                     onClick={() => setActiveService(index)}
                   >
                     <div className="flex items-start space-x-4">
-                      <div className={`w-12 h-12 rounded-full flex items-center justify-center ${
-                        activeService === index ? 'bg-blue-500' : 'bg-gray-400'
-                      }`}>
+                      <div
+                        className={`w-12 h-12 rounded-full flex items-center justify-center ${
+                          activeService === index
+                            ? "bg-blue-500"
+                            : "bg-gray-400"
+                        }`}
+                      >
                         <IconComponent className="w-6 h-6 text-white" />
                       </div>
                       <div className="flex-1">
-                        <h3 className="text-xl font-bold text-gray-900 mb-2">{service.title}</h3>
+                        <h3 className="text-xl font-bold text-gray-900 mb-2">
+                          {service.title}
+                        </h3>
                         <p className="text-gray-600">{service.description}</p>
                       </div>
                     </div>
@@ -149,8 +185,12 @@ const OliveAutomobile = () => {
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">Featured Vehicles</h2>
-            <p className="text-xl text-gray-600">Explore our premium selection of automobiles</p>
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">
+              Featured Vehicles
+            </h2>
+            <p className="text-xl text-gray-600">
+              Explore our premium selection of automobiles
+            </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -170,8 +210,12 @@ const OliveAutomobile = () => {
                   />
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">{vehicle.name}</h3>
-                  <p className="text-blue-600 font-semibold mb-4">{vehicle.price}</p>
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">
+                    {vehicle.name}
+                  </h3>
+                  <p className="text-blue-600 font-semibold mb-4">
+                    {vehicle.price}
+                  </p>
                   <button className="w-full bg-blue-500 hover:bg-blue-600 text-white py-2 rounded-lg font-semibold transition-colors">
                     View Details
                   </button>
@@ -189,9 +233,10 @@ const OliveAutomobile = () => {
             <div>
               <h2 className="text-4xl font-bold mb-6">Get in Touch</h2>
               <p className="text-xl text-blue-100 mb-8">
-                Ready to find your perfect vehicle or need automotive services? Contact our expert team today.
+                Ready to find your perfect vehicle or need automotive services?
+                Contact our expert team today.
               </p>
-              
+
               <div className="space-y-6">
                 <div className="flex items-center space-x-4">
                   <div className="w-12 h-12 bg-blue-700 rounded-full flex items-center justify-center">
@@ -202,7 +247,7 @@ const OliveAutomobile = () => {
                     <p className="text-blue-100">+1 (555) 123-AUTO</p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-center space-x-4">
                   <div className="w-12 h-12 bg-blue-700 rounded-full flex items-center justify-center">
                     <Mail className="w-6 h-6" />

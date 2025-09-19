@@ -1,14 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import {
-  Facebook,
-  Instagram,
-  Linkedin,
-  Twitter,
-  Mail,
-  Phone,
-  MapPin,
-} from "lucide-react";
+import { Linkedin, Mail, Phone, MapPin } from "lucide-react";
+import { SiFacebook, SiInstagram, SiX } from "react-icons/si";
 import logo from "/logo.png";
 
 const Footer = () => {
@@ -31,10 +24,10 @@ const Footer = () => {
               innovation.
             </p>
             <div className="flex space-x-4">
-              <Facebook className="w-5 h-5 text-gray-400 hover:text-[#e45d38] cursor-pointer transition-colors" />
-              <Instagram className="w-5 h-5 text-gray-400 hover:text-[#e45d38] cursor-pointer transition-colors" />
+              <SiFacebook className="w-5 h-5 text-gray-400 hover:text-[#e45d38] cursor-pointer transition-colors" />
+              <SiInstagram className="w-5 h-5 text-gray-400 hover:text-[#e45d38] cursor-pointer transition-colors" />
               <Linkedin className="w-5 h-5 text-gray-400 hover:text-[#e45d38] cursor-pointer transition-colors" />
-              <Twitter className="w-5 h-5 text-gray-400 hover:text-[#e45d38] cursor-pointer transition-colors" />
+              <SiX className="w-5 h-5 text-gray-400 hover:text-[#e45d38] cursor-pointer transition-colors" />
             </div>
           </div>
 
@@ -102,9 +95,14 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin className="w-4 h-4 text-[#e45d38]" />
-                <span className="text-gray-300 text-sm">
-                  123 Business District, City
-                </span>
+                <a
+                  href="https://maps.app.goo.gl/SRr2ABpouHSAL2YZ8"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-300 text-sm hover:underline"
+                >
+                  No.76/A Puttalam - Colombo Rd, Negombo 61130
+                </a>
               </div>
             </div>
           </div>

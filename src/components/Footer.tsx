@@ -1,6 +1,15 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Facebook, Instagram, Linkedin, Twitter, Mail, Phone, MapPin } from 'lucide-react';
+import React from "react";
+import { Link } from "react-router-dom";
+import {
+  Facebook,
+  Instagram,
+  Linkedin,
+  Twitter,
+  Mail,
+  Phone,
+  MapPin,
+} from "lucide-react";
+import logo from "/logo.png";
 
 const Footer = () => {
   return (
@@ -10,13 +19,16 @@ const Footer = () => {
           {/* Company Info */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-[#e45d38] rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">O</span>
-              </div>
-              <span className="text-2xl font-bold">Olive</span>
+              <img
+                src={logo}
+                alt="Olive logo"
+                className="inline-block h-14 md:h-15 object-contain"
+              />
             </div>
             <p className="text-gray-300 text-sm leading-relaxed">
-              A premier conglomerate delivering excellence across automobile, marketing, and home solutions with a commitment to quality and innovation.
+              A premier conglomerate delivering excellence across automobile,
+              marketing, and home solutions with a commitment to quality and
+              innovation.
             </p>
             <div className="flex space-x-4">
               <Facebook className="w-5 h-5 text-gray-400 hover:text-[#e45d38] cursor-pointer transition-colors" />
@@ -30,13 +42,22 @@ const Footer = () => {
           <div className="space-y-4">
             <h3 className="text-lg font-semibold">Business Divisions</h3>
             <div className="space-y-2">
-              <Link to="/automobile" className="block text-gray-300 hover:text-[#e45d38] transition-colors text-sm">
+              <Link
+                to="/automobile"
+                className="block text-gray-300 hover:text-[#e45d38] transition-colors text-sm"
+              >
                 Olive Automobile
               </Link>
-              <Link to="/marketing" className="block text-gray-300 hover:text-[#e45d38] transition-colors text-sm">
+              <Link
+                to="/marketing"
+                className="block text-gray-300 hover:text-[#e45d38] transition-colors text-sm"
+              >
                 Olive Marketing
               </Link>
-              <Link to="/homes" className="block text-gray-300 hover:text-[#e45d38] transition-colors text-sm">
+              <Link
+                to="/homes"
+                className="block text-gray-300 hover:text-[#e45d38] transition-colors text-sm"
+              >
                 Olive Homes
               </Link>
             </div>
@@ -46,13 +67,22 @@ const Footer = () => {
           <div className="space-y-4">
             <h3 className="text-lg font-semibold">Quick Links</h3>
             <div className="space-y-2">
-              <Link to="/about" className="block text-gray-300 hover:text-[#e45d38] transition-colors text-sm">
+              <Link
+                to="/about"
+                className="block text-gray-300 hover:text-[#e45d38] transition-colors text-sm"
+              >
                 About Us
               </Link>
-              <Link to="/products-services" className="block text-gray-300 hover:text-[#e45d38] transition-colors text-sm">
+              <Link
+                to="/products-services"
+                className="block text-gray-300 hover:text-[#e45d38] transition-colors text-sm"
+              >
                 Products & Services
               </Link>
-              <Link to="/contact" className="block text-gray-300 hover:text-[#e45d38] transition-colors text-sm">
+              <Link
+                to="/contact"
+                className="block text-gray-300 hover:text-[#e45d38] transition-colors text-sm"
+              >
                 Contact Us
               </Link>
             </div>
@@ -72,7 +102,9 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin className="w-4 h-4 text-[#e45d38]" />
-                <span className="text-gray-300 text-sm">123 Business District, City</span>
+                <span className="text-gray-300 text-sm">
+                  123 Business District, City
+                </span>
               </div>
             </div>
           </div>
@@ -84,8 +116,18 @@ const Footer = () => {
               © 2025 Olive. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
-              <a href="#" className="text-gray-400 hover:text-[#e45d38] text-sm transition-colors">Privacy Policy</a>
-              <a href="#" className="text-gray-400 hover:text-[#e45d38] text-sm transition-colors">Terms of Service</a>
+              <a
+                href="#"
+                className="text-gray-400 hover:text-[#e45d38] text-sm transition-colors"
+              >
+                Privacy Policy
+              </a>
+              <a
+                href="#"
+                className="text-gray-400 hover:text-[#e45d38] text-sm transition-colors"
+              >
+                Terms of Service
+              </a>
             </div>
           </div>
         </div>

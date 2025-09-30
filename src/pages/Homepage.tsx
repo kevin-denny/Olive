@@ -76,7 +76,7 @@ const Homepage = () => {
     >
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        {/* <div className="absolute inset-0 bg-gradient-to-r from-black/30 to-black/20 z-10"></div> */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/30 to-black/20 z-10"></div>
         {/* <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
@@ -85,7 +85,7 @@ const Homepage = () => {
           }}
         ></div> */}
         <div
-          className="absolute inset-0 bg-contain bg-top bg-no-repeat"
+          className="absolute inset-0 bg-contain bg-center bg-no-repeat"
           style={{
             backgroundImage: "url(/assets/bg.jpg)",
           }}
@@ -211,7 +211,7 @@ const Homepage = () => {
       </section>
 
       {/* Mission, Vision, Values */}
-      <section className="py-20 bg-white">
+      {/* <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -247,7 +247,7 @@ const Homepage = () => {
             })}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* CTA Section */}
       <section className="py-20 bg-[#e45d38]">

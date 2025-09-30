@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Users, Award, Globe, TrendingUp, Star } from "lucide-react";
+import { Users, Award, Globe, TrendingUp, Star, Target } from "lucide-react";
 
 const AboutUs = () => {
   const stats = [
@@ -168,7 +168,7 @@ const AboutUs = () => {
             >
               <div className="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
                 <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mx-auto">
-                  <Star className="w-8 h-8 text-white" />
+                  <Target className="w-8 h-8 text-white" />
                 </div>
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Mission</h3>

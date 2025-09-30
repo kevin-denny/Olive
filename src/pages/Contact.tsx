@@ -1,6 +1,11 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Phone, Mail, MapPin, Clock, Send, Car, Cog, Home } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock, Send, Car, Cog, Home, Linkedin } from 'lucide-react';
+import {
+  SiInstagram,
+  SiFacebook,
+  SiYoutube
+} from "@icons-pack/react-simple-icons";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -312,15 +317,50 @@ const Contact = () => {
             Stay connected with Olive for the latest updates, products, and industry insights
           </p>
           <div className="flex justify-center space-x-6">
-            {['Facebook', 'Instagram', 'LinkedIn', 'Twitter'].map((platform) => (
-              <a
-                key={platform}
-                href="#"
-                className="w-12 h-12 bg-[#e45d38] hover:bg-[#c54a2c] rounded-full flex items-center justify-center text-white font-bold transition-colors"
-              >
-                {platform[0]}
-              </a>
-            ))}
+            <div className="flex space-x-4">
+                  <button
+                    onClick={() =>
+                      window.open(
+                        "https://www.instagram.com/shem_silva_tech?igsh=MTF3Mnp3YnNkdThxMQ==",
+                        "_blank"
+                      )
+                    }
+                    className="w-12 h-12 bg-[#F7A72E]/60 rounded-full flex items-center justify-center hover:bg-[#F7A72E] transition-colors"
+                    aria-label="Follow us on Instagram"
+                  >
+                    <SiInstagram className="w-6 h-6 text-white" />
+                  </button>
+                  <button
+                    onClick={() =>
+                      window.open("https://www.facebook.com/share/1Az3JPFTjP/", "_blank")
+                    }
+                    className="w-12 h-12 bg-[#F7A72E]/60  rounded-full flex items-center justify-center hover:bg-[#F7A72E] transition-colors"
+                    aria-label="Follow us on Facebook"
+                  >
+                    <SiFacebook className="w-6 h-6 text-white" />
+                  </button>
+                  <button
+                    onClick={() =>
+                      window.open("https://www.linkedin.com/company/shem-silva-technologies?trk=public_profile_topcard-current-company", "_blank")
+                    }
+                    className="w-12 h-12 bg-[#F7A72E]/60  rounded-full flex items-center justify-center hover:bg-[#F7A72E] transition-colors"
+                    aria-label="Follow us on Facebook"
+                  >
+                    <Linkedin className="w-6 h-6 text-white" />
+                  </button>
+                  <button
+                    onClick={() =>
+                      window.open(
+                        "https://www.youtube.com/@ShemSilvaTechnologies",
+                        "_blank"
+                      )
+                    }
+                    className="w-12 h-12 bg-[#F7A72E]/60  rounded-full flex items-center justify-center hover:bg-[#F7A72E] transition-colors"
+                    aria-label="Follow us on YouTube"
+                  >
+                    <SiYoutube className="w-6 h-6 text-white" />
+                  </button>
+                </div>
           </div>
         </div>
       </section>

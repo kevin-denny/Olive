@@ -90,7 +90,7 @@ const Homepage = () => {
             backgroundImage: "url(/assets/bg.jpg)",
           }}
         >
-          
+
         </div>
 
         <div className="relative z-20 bg-white/90 text-center text-black max-w-4xl rounded-xl mx-auto px-4 py-4">
@@ -165,10 +165,10 @@ const Homepage = () => {
                   initial={{ y: 50, opacity: 0 }}
                   animate={{ y: 0, opacity: 1 }}
                   transition={{ duration: 0.6, delay: index * 0.2 }}
-                  className="group"
+                  className="group h-full"
                 >
-                  <Link to={division.path} className="block">
-                    <div className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300">
+                  <Link to={division.path} className="block h-full">
+                    <div className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 h-full flex flex-col">
                       <div className="relative h-64 overflow-hidden">
                         <img
                           src={division.image}
@@ -180,7 +180,7 @@ const Homepage = () => {
                         ></div>
                       </div>
 
-                      <div className="p-8">
+                      <div className="p-8 flex-1 flex flex-col">
                         <div className="flex items-center mb-4">
                           <div
                             className={`w-12 h-12 rounded-full bg-gradient-to-r ${division.color} flex items-center justify-center mr-4`}
@@ -192,7 +192,7 @@ const Homepage = () => {
                           </h3>
                         </div>
 
-                        <p className="text-gray-600 mb-6 leading-relaxed">
+                        <p className="text-gray-600 mb-6 leading-relaxed flex-grow">
                           {division.description}
                         </p>
 

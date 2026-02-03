@@ -160,7 +160,7 @@ const OliveHomes = () => {
                   initial={{ y: 50, opacity: 0 }}
                   animate={{ y: 0, opacity: 1 }}
                   transition={{ duration: 0.6, delay: index * 0.2 }}
-                  className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow group"
+                  className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow group h-full flex flex-col"
                 >
                   <div className="h-64 overflow-hidden">
                     <img
@@ -169,7 +169,7 @@ const OliveHomes = () => {
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                     />
                   </div>
-                  <div className="p-8">
+                  <div className="p-8 flex-1 flex flex-col">
                     <div className="flex items-center mb-4">
                       <div
                         className="w-12 h-12 rounded-full flex items-center justify-center mr-4"
@@ -181,7 +181,7 @@ const OliveHomes = () => {
                         {category.title}
                       </h3>
                     </div>
-                    <p className="text-gray-600 mb-6 leading-relaxed">
+                    <p className="text-gray-600 mb-6 leading-relaxed flex-grow">
                       {category.description}
                     </p>
                     <div className="space-y-2 mb-6">
@@ -204,8 +204,8 @@ const OliveHomes = () => {
                       className="w-full text-white py-3 rounded-lg font-semibold transition-colors flex items-center justify-center group"
                       style={{ backgroundColor: colors.primary }}
                       onMouseOver={(e) =>
-                        (e.currentTarget.style.backgroundColor =
-                          colors.secondary)
+                      (e.currentTarget.style.backgroundColor =
+                        colors.secondary)
                       }
                       onMouseOut={(e) =>
                         (e.currentTarget.style.backgroundColor = colors.primary)

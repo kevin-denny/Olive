@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Users, Award, Globe, TrendingUp, Star, Target } from "lucide-react";
+import logo from "/logo.png";
 
 const AboutUs = () => {
   const stats = [
@@ -51,7 +52,12 @@ const AboutUs = () => {
               transition={{ duration: 0.6 }}
               className="text-5xl md:text-6xl font-bold mb-6"
             >
-              About <span className="text-[#e45d38]">Olive</span>
+              About{" "}
+              <img
+                src={logo}
+                alt="Olive logo"
+                className="inline-block h-12 md:h-16 object-contain align-middle"
+              />
             </motion.h1>
             <motion.p
               initial={{ y: 30, opacity: 0 }}

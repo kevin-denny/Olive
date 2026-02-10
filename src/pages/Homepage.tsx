@@ -87,7 +87,7 @@ const Homepage = () => {
         <div
           className="absolute inset-0 bg-contain bg-center bg-no-repeat"
           style={{
-            backgroundImage: "url(/assets/bg.jpg)",
+            backgroundImage: "url(/assets/bg.jpeg)",
           }}
         >
 

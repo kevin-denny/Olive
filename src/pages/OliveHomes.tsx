@@ -108,12 +108,18 @@ const OliveHomes = () => {
       className="min-h-screen pt-16"
     >
       {/* Hero Section */}
-      {/* <section 
-        className="relative py-20 text-white"
-        style={{ background: `linear-gradient(135deg, ${colors.primary} 0%, ${colors.secondary} 100%)` }}
+      <section
+        className="relative py-20 text-white bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: 'url(/assets/bg.jpeg)',
+          minHeight: '100vh',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundAttachment: 'fixed'
+        }}
       >
-        <div className="absolute inset-0 bg-black/20"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="absolute inset-0 bg-black/40"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center">
           <div className="max-w-3xl">
             <motion.h1
               initial={{ y: 30, opacity: 0 }}
@@ -134,7 +140,7 @@ const OliveHomes = () => {
             </motion.p>
           </div>
         </div>
-      </section> */}
+      </section>
 
       {/* Product Categories */}
       <section className="py-12" style={{ backgroundColor: colors.light }}>

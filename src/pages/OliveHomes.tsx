@@ -107,40 +107,6 @@ const OliveHomes = () => {
       exit={{ opacity: 0 }}
       className="min-h-screen pt-16"
     >
-      {/* Hero Section */}
-      <section
-        className="relative py-20 text-white bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: 'url(/assets/bg.jpeg)',
-          minHeight: '100vh',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundAttachment: 'fixed'
-        }}
-      >
-        <div className="absolute inset-0 bg-black/40"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center">
-          <div className="max-w-3xl">
-            <motion.h1
-              initial={{ y: 30, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.6 }}
-              className="text-5xl md:text-6xl font-bold mb-6"
-            >
-              <span style={{ color: colors.tertiary }}>Olive</span> Homes
-            </motion.h1>
-            <motion.p
-              initial={{ y: 30, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-xl leading-relaxed"
-              style={{ color: colors.light }}
-            >
-              Transform your living space with our curated collection of premium homeware, luxury furniture, and lifestyle solutions. Create a home that reflects your unique style and enhances your daily life.
-            </motion.p>
-          </div>
-        </div>
-      </section>
 
       {/* Product Categories */}
       <section className="py-12" style={{ backgroundColor: colors.light }}>

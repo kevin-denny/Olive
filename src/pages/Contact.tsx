@@ -64,23 +64,23 @@ const Contact = () => {
   const divisionContacts = [
     {
       division: "Olive Automobile",
-      phone: "+1 (555) 123-AUTO",
-      email: "auto@olive.com",
-      address: "789 Auto Plaza, Showroom District",
+      phone: "+94 77 772 2830 / +94 77 722 3143",
+      email: "olivelandin@gmail.com",
+      address: "1 100, Colombo, Mahawewa",
       color: "from-blue-600 to-blue-700",
     },
     {
       division: "Olive Marketing",
-      phone: "+1 (555) 123-TOOLS",
-      email: "marketing@olive.com",
-      address: "321 Industrial Park, Manufacturing Zone",
+      phone: "+94 74 141 7434",
+      email: "olivemarketingint@gmail.com",
+      address: "1 100, Colombo, Mahawewa",
       color: "from-green-600 to-green-700",
     },
     {
       division: "Olive Homes",
-      phone: "+1 (555) 123-HOMES",
-      email: "homes@olive.com",
-      address: "654 Design Center, Lifestyle Quarter",
+      phone: "+94 32 713 7197",
+      email: "olivehomes@gmail.com",
+      address: "No.76/A Puttalam - Colombo Rd, Negombo 61130",
       color: "from-amber-600 to-amber-700",
     },
   ];

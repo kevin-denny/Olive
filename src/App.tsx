@@ -8,7 +8,7 @@ import AboutUs from './pages/AboutUs';
 import OliveAutomobile from './pages/OliveAutomobile';
 import OliveMarketing from './pages/OliveMarketing';
 import OliveHomes from './pages/OliveHomes';
-import ProductsServices from './pages/ProductsServices';
+// import ProductsServices from './pages/ProductsServices';
 import Contact from './pages/Contact';
 
 function App() {
@@ -23,7 +23,7 @@ function App() {
             <Route path="/automobile" element={<OliveAutomobile />} />
             <Route path="/marketing" element={<OliveMarketing />} />
             <Route path="/homes" element={<OliveHomes />} />
-            <Route path="/products-services" element={<ProductsServices />} />
+            {/* <Route path="/products-services" element={<ProductsServices />} /> */}
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </AnimatePresence>

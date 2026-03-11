@@ -28,19 +28,17 @@ const Header = () => {
           <div className="hidden md:flex items-center space-x-8">
             <Link
               to="/"
-              className={`text-sm font-medium transition-colors hover:text-[#e45d38] ${
-                location.pathname === "/" ? "text-[#e45d38]" : "text-gray-700"
-              }`}
+              className={`text-sm font-medium transition-colors hover:text-[#e45d38] ${location.pathname === "/" ? "text-[#e45d38]" : "text-gray-700"
+                }`}
             >
               Home
             </Link>
             <Link
               to="/about"
-              className={`text-sm font-medium transition-colors hover:text-[#e45d38] ${
-                location.pathname === "/about"
+              className={`text-sm font-medium transition-colors hover:text-[#e45d38] ${location.pathname === "/about"
                   ? "text-[#e45d38]"
                   : "text-gray-700"
-              }`}
+                }`}
             >
               About Us
             </Link>
@@ -77,7 +75,7 @@ const Header = () => {
               )}
             </div>
 
-            <Link
+            {/* <Link
               to="/products-services"
               className={`text-sm font-medium transition-colors hover:text-[#e45d38] ${
                 location.pathname === "/products-services"
@@ -86,14 +84,13 @@ const Header = () => {
               }`}
             >
               Products & Services
-            </Link>
+            </Link> */}
             <Link
               to="/contact"
-              className={`text-sm font-medium transition-colors hover:text-[#e45d38] ${
-                location.pathname === "/contact"
+              className={`text-sm font-medium transition-colors hover:text-[#e45d38] ${location.pathname === "/contact"
                   ? "text-[#e45d38]"
                   : "text-gray-700"
-              }`}
+                }`}
             >
               Contact
             </Link>
@@ -138,13 +135,13 @@ const Header = () => {
                   {division.name}
                 </Link>
               ))}
-              <Link
+              {/* <Link
                 to="/products-services"
                 className="text-gray-700 hover:text-[#e45d38] transition-colors"
                 onClick={() => setIsOpen(false)}
               >
                 Products & Services
-              </Link>
+              </Link> */}
               <Link
                 to="/contact"
                 className="text-gray-700 hover:text-[#e45d38] transition-colors"

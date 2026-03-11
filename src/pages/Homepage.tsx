@@ -19,7 +19,7 @@ const Homepage = () => {
       description:
         "Premium automotive sales, parts, and comprehensive service solutions for discerning customers.",
       image:
-        "https://images.pexels.com/photos/3802510/pexels-photo-3802510.jpeg?auto=compress&cs=tinysrgb&w=800",
+        "/assets/car.webp",
       path: "/automobile",
       icon: Car,
       color: "from-blue-600 to-blue-700",
@@ -29,7 +29,7 @@ const Homepage = () => {
       description:
         "Industrial machinery, precision tools, and commercial cookware for professional excellence.",
       image:
-        "https://images.pexels.com/photos/416405/pexels-photo-416405.jpeg?auto=compress&cs=tinysrgb&w=800",
+        "/assets/tray.webp",
       path: "/marketing",
       icon: Briefcase,
       color: "from-green-600 to-green-700",
@@ -39,7 +39,7 @@ const Homepage = () => {
       description:
         "Curated homeware, luxury furniture, and lifestyle solutions for sophisticated living.",
       image:
-        "https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=800",
+        "/assets/coffeeset.webp",
       path: "/homes",
       icon: Home,
       color: "from-amber-600 to-amber-700",

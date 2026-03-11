@@ -12,7 +12,7 @@ const Header = () => {
   const divisions = [
     { name: "Olive Automobile", path: "/automobile", color: "text-blue-600" },
     { name: "Olive Marketing", path: "/marketing", color: "text-green-600" },
-    { name: "Olive Homes", path: "/homes", color: "text-amber-600" },
+    { name: "Olive Home", path: "/homes", color: "text-amber-600" },
   ];
 
   return (
@@ -36,8 +36,8 @@ const Header = () => {
             <Link
               to="/about"
               className={`text-sm font-medium transition-colors hover:text-[#e45d38] ${location.pathname === "/about"
-                  ? "text-[#e45d38]"
-                  : "text-gray-700"
+                ? "text-[#e45d38]"
+                : "text-gray-700"
                 }`}
             >
               About Us
@@ -88,8 +88,8 @@ const Header = () => {
             <Link
               to="/contact"
               className={`text-sm font-medium transition-colors hover:text-[#e45d38] ${location.pathname === "/contact"
-                  ? "text-[#e45d38]"
-                  : "text-gray-700"
+                ? "text-[#e45d38]"
+                : "text-gray-700"
                 }`}
             >
               Contact

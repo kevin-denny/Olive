@@ -35,7 +35,7 @@ const Homepage = () => {
       color: "from-green-600 to-green-700",
     },
     {
-      name: "Olive Homes",
+      name: "Olive Home",
       description:
         "Curated homeware, luxury furniture, and lifestyle solutions for sophisticated living.",
       image:

@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Linkedin, Mail, Phone, MapPin } from "lucide-react";
-import { SiFacebook, SiInstagram, SiX } from "react-icons/si";
+import { Mail, Phone, MapPin } from "lucide-react";
+import { SiFacebook, SiInstagram, SiTiktok } from "react-icons/si";
 import logo from "/logo.png";
 
 const Footer = () => {
@@ -24,10 +24,30 @@ const Footer = () => {
               innovation.
             </p>
             <div className="flex space-x-4">
-              <SiFacebook className="w-5 h-5 text-gray-400 hover:text-[#e45d38] cursor-pointer transition-colors" />
-              <SiInstagram className="w-5 h-5 text-gray-400 hover:text-[#e45d38] cursor-pointer transition-colors" />
-              <Linkedin className="w-5 h-5 text-gray-400 hover:text-[#e45d38] cursor-pointer transition-colors" />
-              <SiX className="w-5 h-5 text-gray-400 hover:text-[#e45d38] cursor-pointer transition-colors" />
+              <a
+                href="https://www.facebook.com/share/17XLuZDQnH/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook"
+              >
+                <SiFacebook className="w-5 h-5 text-gray-400 hover:text-[#e45d38] cursor-pointer transition-colors" />
+              </a>
+              <a
+                href="https://www.instagram.com/olivehome.lk?igsh=MXVzMWEwOTd0N2xwYw=="
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+              >
+                <SiInstagram className="w-5 h-5 text-gray-400 hover:text-[#e45d38] cursor-pointer transition-colors" />
+              </a>
+              <a
+                href="https://www.tiktok.com/@olivehome.lk?_r=1&_t=ZS-94alaZGpq7A"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="TikTok"
+              >
+                <SiTiktok className="w-5 h-5 text-gray-400 hover:text-[#e45d38] cursor-pointer transition-colors" />
+              </a>
             </div>
           </div>
 
@@ -51,7 +71,7 @@ const Footer = () => {
                 to="/homes"
                 className="block text-gray-300 hover:text-[#e45d38] transition-colors text-sm"
               >
-                Olive Homes
+                Olive Home
               </Link>
             </div>
           </div>

@@ -242,7 +242,7 @@ const OliveHomes = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {[
               {
-                text: "Olive Homes transformed our living space beyond our expectations. The quality and attention to detail is exceptional.",
+                text: "Olive Home transformed our living space beyond our expectations. The quality and attention to detail is exceptional.",
                 author: "Sarah Johnson",
                 rating: 5,
               },

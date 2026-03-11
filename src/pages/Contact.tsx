@@ -5,16 +5,14 @@ import {
   Mail,
   MapPin,
   Clock,
-  Send,
   Car,
   Cog,
   Home,
-  Linkedin,
 } from "lucide-react";
 import {
   SiInstagram,
   SiFacebook,
-  SiYoutube,
+  SiTiktok,
 } from "@icons-pack/react-simple-icons";
 
 const Contact = () => {
@@ -31,7 +29,7 @@ const Contact = () => {
     { value: "general", label: "General Inquiry", icon: Mail },
     { value: "automobile", label: "Olive Automobile", icon: Car },
     { value: "marketing", label: "Olive Marketing", icon: Cog },
-    { value: "homes", label: "Olive Homes", icon: Home },
+    { value: "homes", label: "Olive Home", icon: Home },
   ];
 
   const contactInfo = [
@@ -77,7 +75,7 @@ const Contact = () => {
       color: "from-green-600 to-green-700",
     },
     {
-      division: "Olive Homes",
+      division: "Olive Home",
       phone: "+94 32 713 7197",
       email: "olivehomes@gmail.com",
       address: "No.76/A Puttalam - Colombo Rd, Negombo 61130",
@@ -253,7 +251,7 @@ const Contact = () => {
               <button
                 onClick={() =>
                   window.open(
-                    // "https://www.instagram.com/shem_silva_tech?igsh=MTF3Mnp3YnNkdThxMQ==",
+                    "https://www.instagram.com/olivehome.lk?igsh=MXVzMWEwOTd0N2xwYw==",
                     "_blank"
                   )
                 }
@@ -265,11 +263,11 @@ const Contact = () => {
               <button
                 onClick={() =>
                   window.open(
-                    // "https://www.facebook.com/share/1Az3JPFTjP/",
+                    "https://www.facebook.com/share/17XLuZDQnH/",
                     "_blank"
                   )
                 }
-                className="w-12 h-12 bg-[#F7A72E]/60  rounded-full flex items-center justify-center hover:bg-[#F7A72E] transition-colors"
+                className="w-12 h-12 bg-[#F7A72E]/60 rounded-full flex items-center justify-center hover:bg-[#F7A72E] transition-colors"
                 aria-label="Follow us on Facebook"
               >
                 <SiFacebook className="w-6 h-6 text-white" />
@@ -277,26 +275,14 @@ const Contact = () => {
               <button
                 onClick={() =>
                   window.open(
-                    // "https://www.linkedin.com/company/shem-silva-technologies?trk=public_profile_topcard-current-company",
+                    "https://www.tiktok.com/@olivehome.lk?_r=1&_t=ZS-94alaZGpq7A",
                     "_blank"
                   )
                 }
-                className="w-12 h-12 bg-[#F7A72E]/60  rounded-full flex items-center justify-center hover:bg-[#F7A72E] transition-colors"
-                aria-label="Follow us on Facebook"
+                className="w-12 h-12 bg-[#F7A72E]/60 rounded-full flex items-center justify-center hover:bg-[#F7A72E] transition-colors"
+                aria-label="Follow us on TikTok"
               >
-                <Linkedin className="w-6 h-6 text-white" />
-              </button>
-              <button
-                onClick={() =>
-                  window.open(
-                    // "https://www.youtube.com/@ShemSilvaTechnologies",
-                    "_blank"
-                  )
-                }
-                className="w-12 h-12 bg-[#F7A72E]/60  rounded-full flex items-center justify-center hover:bg-[#F7A72E] transition-colors"
-                aria-label="Follow us on YouTube"
-              >
-                <SiYoutube className="w-6 h-6 text-white" />
+                <SiTiktok className="w-6 h-6 text-white" />
               </button>
             </div>
           </div>

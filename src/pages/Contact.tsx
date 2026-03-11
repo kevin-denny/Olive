@@ -178,184 +178,64 @@ const Contact = () => {
         </div>
       </section>
 
-      {/* Contact Form and Map */}
+      {/* Locations & Division Contacts */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-            {/* Contact Form */}
-            {/* <motion.div
-              initial={{ x: -50, opacity: 0 }}
-              animate={{ x: 0, opacity: 1 }}
-              transition={{ duration: 0.6 }}
-            >
-              <h2 className="text-3xl font-bold text-gray-900 mb-8">
-                Send us a Message
-              </h2>
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div>
-                    <label className="block text-sm font-semibold text-gray-700 mb-2">
-                      Full Name
-                    </label>
-                    <input
-                      type="text"
-                      name="name"
-                      value={formData.name}
-                      onChange={handleInputChange}
-                      required
-                      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#e45d38] focus:border-transparent"
-                      placeholder="Enter your full name"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-semibold text-gray-700 mb-2">
-                      Email Address
-                    </label>
-                    <input
-                      type="email"
-                      name="email"
-                      value={formData.email}
-                      onChange={handleInputChange}
-                      required
-                      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#e45d38] focus:border-transparent"
-                      placeholder="Enter your email"
-                    />
-                  </div>
-                </div>
+          {/* Section heading */}
+          <motion.div
+            initial={{ y: 30, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Locations</h2>
+            <p className="text-xl text-gray-600">Find us or reach out to the right team directly</p>
+          </motion.div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div>
-                    <label className="block text-sm font-semibold text-gray-700 mb-2">
-                      Phone Number
-                    </label>
-                    <input
-                      type="tel"
-                      name="phone"
-                      value={formData.phone}
-                      onChange={handleInputChange}
-                      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#e45d38] focus:border-transparent"
-                      placeholder="Enter your phone number"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-semibold text-gray-700 mb-2">
-                      Division
-                    </label>
-                    <select
-                      name="division"
-                      value={formData.division}
-                      onChange={handleInputChange}
-                      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#e45d38] focus:border-transparent"
-                    >
-                      <option value="">Select a division</option>
-                      {divisions.map((division) => (
-                        <option key={division.value} value={division.value}>
-                          {division.label}
-                        </option>
-                      ))}
-                    </select>
-                  </div>
-                </div>
+          {/* Map */}
+          <motion.div
+            initial={{ y: 30, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="bg-gray-100 rounded-2xl overflow-hidden h-80 mb-12"
+          >
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3958.2403480797334!2d79.84481737448462!3d7.213400514762984!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae2ef002fdb4dbd%3A0xe4fda403e0760f0!2sOlive%20Marketing%20(Pvt)%20Ltd!5e0!3m2!1sen!2slk!4v1759202824626!5m2!1sen!2slk"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </motion.div>
 
-                <div>
-                  <label className="block text-sm font-semibold text-gray-700 mb-2">
-                    Subject
-                  </label>
-                  <input
-                    type="text"
-                    name="subject"
-                    value={formData.subject}
-                    onChange={handleInputChange}
-                    required
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#e45d38] focus:border-transparent"
-                    placeholder="Brief description of your inquiry"
-                  />
+          {/* Division Contacts – 3-column grid */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {divisionContacts.map((contact, index) => (
+              <motion.div
+                key={contact.division}
+                initial={{ y: 20, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
+                className={`bg-gradient-to-r ${contact.color} p-6 rounded-xl text-white`}
+              >
+                <h4 className="text-lg font-bold mb-3">{contact.division}</h4>
+                <div className="space-y-2 text-sm">
+                  <p className="flex items-center">
+                    <Phone className="w-4 h-4 mr-2 shrink-0" />
+                    {contact.phone}
+                  </p>
+                  <p className="flex items-center">
+                    <Mail className="w-4 h-4 mr-2 shrink-0" />
+                    {contact.email}
+                  </p>
+                  <p className="flex items-start">
+                    <MapPin className="w-4 h-4 mr-2 mt-0.5 shrink-0" />
+                    {contact.address}
+                  </p>
                 </div>
-
-                <div>
-                  <label className="block text-sm font-semibold text-gray-700 mb-2">
-                    Message
-                  </label>
-                  <textarea
-                    name="message"
-                    value={formData.message}
-                    onChange={handleInputChange}
-                    required
-                    rows={6}
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#e45d38] focus:border-transparent"
-                    placeholder="Provide details about your inquiry, requirements, or questions..."
-                  ></textarea>
-                </div>
-
-                <button
-                  type="submit"
-                  className="w-full bg-[#e45d38] hover:bg-[#c54a2c] text-white py-4 rounded-lg font-semibold text-lg transition-colors flex items-center justify-center group"
-                >
-                  <Send className="w-5 h-5 mr-2" />
-                  Send Message
-                </button>
-              </form>
-            </motion.div> */}
-
-            {/* Map Section */}
-            <motion.div
-              initial={{ x: 50, opacity: 0 }}
-              animate={{ x: 0, opacity: 1 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="space-y-8"
-            >
-              <div>
-                <h2 className="text-3xl font-bold text-gray-900 mb-8">
-                  Our Locations
-                </h2>
-                <div className="bg-gray-100 rounded-2xl overflow-hidden h-64 mb-8">
-                  <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3958.2403480797334!2d79.84481737448462!3d7.213400514762984!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae2ef002fdb4dbd%3A0xe4fda403e0760f0!2sOlive%20Marketing%20(Pvt)%20Ltd!5e0!3m2!1sen!2slk!4v1759202824626!5m2!1sen!2slk"
-                    width="100%"
-                    height="100%"
-                    style={{ border: 0 }}
-                    // allowfullscreen=""
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
-                  ></iframe>
-                </div>
-              </div>
-
-              <div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-6">
-                  Division Contacts
-                </h3>
-                <div className="space-y-4">
-                  {divisionContacts.map((contact, index) => (
-                    <motion.div
-                      key={contact.division}
-                      initial={{ y: 20, opacity: 0 }}
-                      animate={{ y: 0, opacity: 1 }}
-                      transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
-                      className={`bg-gradient-to-r ${contact.color} p-6 rounded-xl text-white`}
-                    >
-                      <h4 className="text-lg font-bold mb-3">
-                        {contact.division}
-                      </h4>
-                      <div className="space-y-2 text-sm">
-                        <p className="flex items-center">
-                          <Phone className="w-4 h-4 mr-2" />
-                          {contact.phone}
-                        </p>
-                        <p className="flex items-center">
-                          <Mail className="w-4 h-4 mr-2" />
-                          {contact.email}
-                        </p>
-                        <p className="flex items-center">
-                          <MapPin className="w-4 h-4 mr-2" />
-                          {contact.address}
-                        </p>
-                      </div>
-                    </motion.div>
-                  ))}
-                </div>
-              </div>
-            </motion.div>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>

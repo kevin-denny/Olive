@@ -234,7 +234,7 @@ const OliveHomes = () => {
       </section>
 
       {/* Testimonials */}
-      <section className="py-20" style={{ backgroundColor: colors.quaternary }}>
+      {/* <section className="py-20" style={{ backgroundColor: colors.quaternary }}>
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold text-gray-900 mb-12">
             What Our Customers Say
@@ -277,10 +277,42 @@ const OliveHomes = () => {
             ))}
           </div>
         </div>
+      </section> */}
+
+      {/* Our Clients */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Clients</h2>
+            <p className="text-xl text-gray-600">Trusted by leading brands across the industry</p>
+          </div>
+          <div className="flex flex-wrap items-center justify-center gap-10 md:gap-16">
+            {[
+              { src: "/clients/grand.webp", alt: "The Grand Gastrobar" },
+              { src: "/clients/jack.webp", alt: "Jack and Gelato" },
+              { src: "/clients/legacy.webp", alt: "Legacy" },
+              { src: "/clients/noir.webp", alt: "Noir" },
+            ].map((client, index) => (
+              <motion.div
+                key={client.alt}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="flex items-center justify-center"
+              >
+                <img
+                  src={client.src}
+                  alt={client.alt}
+                  className="h-28 md:h-36 w-auto object-contain transition-all duration-300"
+                />
+              </motion.div>
+            ))}
+          </div>
+        </div>
       </section>
 
       {/* Catalog Inquiry Form */}
-      <section className="py-20 bg-white">
+      {/* <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-900 mb-6">
@@ -403,7 +435,7 @@ const OliveHomes = () => {
             </form>
           </motion.div>
         </div>
-      </section>
+      </section> */}
     </motion.div>
   );
 };

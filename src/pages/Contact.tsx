@@ -38,20 +38,20 @@ const Contact = () => {
     {
       icon: Phone,
       title: "Phone",
-      details: ["+1 (555) 123-4567", "+1 (555) 987-6543"],
-      description: "Available Mon-Fri, 9AM-6PM EST",
+      details: ["+94 77 772 2830", "+94 74 141 7434"],
+      description: "Available Mon-Sat, 9AM-6PM",
     },
     {
       icon: Mail,
       title: "Email",
-      details: ["info@olive.com", "support@olive.com"],
+      details: ["olivemarketingint@gmail.com", "olivelandin@gmail.com"],
       description: "We typically respond within 24 hours",
     },
     {
       icon: MapPin,
       title: "Address",
-      details: ["123 Business District", "Suite 456, City, State 12345"],
-      description: "Visit our main headquarters",
+      details: ["1 100, Colombo, Mahawewa", "No.76/A Puttalam - Colombo Rd, Negombo 61130"],
+      description: "Visit our offices",
     },
     {
       icon: Clock,
@@ -183,7 +183,7 @@ const Contact = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             {/* Contact Form */}
-            <motion.div
+            {/* <motion.div
               initial={{ x: -50, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.6 }}
@@ -295,7 +295,7 @@ const Contact = () => {
                   Send Message
                 </button>
               </form>
-            </motion.div>
+            </motion.div> */}
 
             {/* Map Section */}
             <motion.div

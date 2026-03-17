@@ -130,16 +130,16 @@ const OliveAutomobile = () => {
                     animate={{ x: 0, opacity: 1 }}
                     transition={{ duration: 0.6, delay: index * 0.1 }}
                     className={`p-6 rounded-xl cursor-pointer transition-all ${activeService === index
-                        ? "bg-blue-50 border-2 border-blue-500"
-                        : "bg-gray-50 hover:bg-gray-100"
+                      ? "bg-blue-50 border-2 border-blue-500"
+                      : "bg-gray-50 hover:bg-gray-100"
                       }`}
                     onClick={() => setActiveService(index)}
                   >
                     <div className="flex items-start space-x-4">
                       <div
                         className={`w-12 h-12 rounded-full flex items-center justify-center ${activeService === index
-                            ? "bg-blue-500"
-                            : "bg-gray-400"
+                          ? "bg-blue-500"
+                          : "bg-gray-400"
                           }`}
                       >
                         <IconComponent className="w-6 h-6 text-white" />

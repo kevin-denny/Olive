@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import Header from './components/Header';
+import SEOUpdater from './components/SEOUpdater';
 import Footer from './components/Footer';
 import Homepage from './pages/Homepage';
 import AboutUs from './pages/AboutUs';
@@ -14,6 +15,7 @@ import Contact from './pages/Contact';
 function App() {
   return (
     <Router>
+      <SEOUpdater />
       <div className="min-h-screen bg-white">
         <Header />
         <AnimatePresence mode="wait">

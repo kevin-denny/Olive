@@ -50,25 +50,21 @@ const OliveAutomobile = () => {
       name: "Premium Sedan",
       image:
         "https://images.pexels.com/photos/3802508/pexels-photo-3802508.jpeg?auto=compress&cs=tinysrgb&w=800",
-      price: "Starting from $35,000",
     },
     {
       name: "Luxury SUV",
       image:
         "https://images.pexels.com/photos/1429775/pexels-photo-1429775.jpeg?auto=compress&cs=tinysrgb&w=800",
-      price: "Starting from $55,000",
     },
     {
       name: "Sports Coupe",
       image:
         "https://images.pexels.com/photos/1335077/pexels-photo-1335077.jpeg?auto=compress&cs=tinysrgb&w=800",
-      price: "Starting from $45,000",
     },
     {
       name: "Electric Vehicle",
       image:
         "https://images.pexels.com/photos/3752169/pexels-photo-3752169.jpeg?auto=compress&cs=tinysrgb&w=800",
-      price: "Starting from $42,000",
     },
   ];
 
@@ -211,9 +207,6 @@ const OliveAutomobile = () => {
                   <h3 className="text-xl font-bold text-gray-900 mb-2">
                     {vehicle.name}
                   </h3>
-                  <p className="text-blue-600 font-semibold mb-4">
-                    {vehicle.price}
-                  </p>
                   <button className="w-full bg-blue-500 hover:bg-blue-600 text-white py-2 rounded-lg font-semibold transition-colors">
                     View Details
                   </button>

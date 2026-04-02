@@ -8,8 +8,30 @@ import {
   ArrowRight,
   Star,
   Send,
+  Loader2,
 } from "lucide-react";
 import logo from "/logo-homes.png";
+
+const GalleryImage = ({ src, index }: { src: string; index: number }) => {
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  return (
+    <div className="w-full h-48 md:h-64 relative bg-gray-100 flex items-center justify-center">
+      {!isLoaded && (
+        <Loader2 className="w-8 h-8 text-[#A48D78] animate-spin absolute z-10" />
+      )}
+      <img
+        src={src}
+        alt={`Olive Home Gallery image ${index + 1}`}
+        loading="lazy"
+        onLoad={() => setIsLoaded(true)}
+        className={`w-full h-full object-cover transform transition-all duration-700 ease-in-out ${
+          isLoaded ? "opacity-100 scale-100 group-hover:scale-110" : "opacity-0 scale-105"
+        }`}
+      />
+    </div>
+  );
+};
 
 const OliveHomes = () => {
   const [formData, setFormData] = useState({
@@ -88,6 +110,28 @@ const OliveHomes = () => {
         "https://images.pexels.com/photos/1571470/pexels-photo-1571470.jpeg?auto=compress&cs=tinysrgb&w=600",
     },
   ];
+
+  const homeAlbum = [
+    "/assets/home/CHB02524.webp",
+    "/assets/home/CHB02571.webp",
+    "/assets/home/CHB02874.webp",
+    "/assets/home/CHB02885.webp",
+    "/assets/home/CHB02942.webp",
+    "/assets/home/CHB03021.webp",
+    "/assets/home/CHB03132.webp",
+    "/assets/home/CHB03199.webp",
+    "/assets/home/CHB03208.webp",
+    "/assets/home/CHB03223.webp",
+    "/assets/home/CHB03475.webp",
+    "/assets/home/CHB03525.webp",
+    "/assets/home/CHB03576.webp",
+    "/assets/home/CHB03639.webp",
+    "/assets/home/CHB03667.webp",
+    "/assets/home/CHB03722.webp",
+    "/assets/home/CHB03874.webp",
+  ];
+
+  const [visibleImageCount, setVisibleImageCount] = useState(8);
 
   const handleInputChange = (
     e: React.ChangeEvent<
@@ -230,6 +274,56 @@ const OliveHomes = () => {
               </motion.div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Gallery / Album */}
+      <section className="py-20" style={{ backgroundColor: colors.quaternary }}>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">
+              Our Gallery
+            </h2>
+            <p className="text-xl text-gray-600">
+              A glimpse into the stunning spaces we've created
+            </p>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            {homeAlbum.slice(0, visibleImageCount).map((src, index) => (
+              <motion.div
+                key={src}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: (index % 4) * 0.1 }}
+                className="overflow-hidden rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 group cursor-pointer"
+              >
+                <GalleryImage src={src} index={index} />
+              </motion.div>
+            ))}
+          </div>
+          {visibleImageCount < homeAlbum.length && (
+            <div className="mt-12 text-center">
+              <button
+                onClick={() => setVisibleImageCount((prev) => prev + 8)}
+                className="px-8 py-3 rounded-lg font-semibold transition-colors duration-300 border-2"
+                style={{
+                  borderColor: colors.primary,
+                  color: colors.primary,
+                }}
+                onMouseOver={(e) => {
+                  e.currentTarget.style.backgroundColor = colors.primary;
+                  e.currentTarget.style.color = "#fff";
+                }}
+                onMouseOut={(e) => {
+                  e.currentTarget.style.backgroundColor = "transparent";
+                  e.currentTarget.style.color = colors.primary;
+                }}
+              >
+                Load More
+              </button>
+            </div>
+          )}
         </div>
       </section>
 

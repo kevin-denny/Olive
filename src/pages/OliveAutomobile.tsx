@@ -207,9 +207,9 @@ const OliveAutomobile = () => {
                   <h3 className="text-xl font-bold text-gray-900 mb-2">
                     {vehicle.name}
                   </h3>
-                  <button className="w-full bg-blue-500 hover:bg-blue-600 text-white py-2 rounded-lg font-semibold transition-colors">
+                  {/* <button className="w-full bg-blue-500 hover:bg-blue-600 text-white py-2 rounded-lg font-semibold transition-colors">
                     View Details
-                  </button>
+                  </button> */}
                 </div>
               </motion.div>
             ))}

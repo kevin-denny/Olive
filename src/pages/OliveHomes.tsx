@@ -8,7 +8,6 @@ import {
   ArrowRight,
   Star,
   Send,
-  Loader2,
 } from "lucide-react";
 import logo from "/logo-homes.png";
 
@@ -16,18 +15,20 @@ const GalleryImage = ({ src, index }: { src: string; index: number }) => {
   const [isLoaded, setIsLoaded] = useState(false);
 
   return (
-    <div className="w-full h-48 md:h-64 relative bg-gray-100 flex items-center justify-center">
-      {!isLoaded && (
-        <Loader2 className="w-8 h-8 text-[#A48D78] animate-spin absolute z-10" />
-      )}
+    <div
+      className="w-full h-48 md:h-64 relative overflow-hidden"
+      style={{ backgroundColor: "#E6DAC8" }}
+    >
       <img
         src={src}
         alt={`Olive Home Gallery image ${index + 1}`}
         loading="lazy"
+        decoding="async"
         onLoad={() => setIsLoaded(true)}
-        className={`w-full h-full object-cover transform transition-all duration-700 ease-in-out ${
-          isLoaded ? "opacity-100 scale-100 group-hover:scale-110" : "opacity-0 scale-105"
-        }`}
+        className={`w-full h-full object-cover transform-gpu transition-all duration-700 ease-out will-change-transform ${isLoaded
+            ? "opacity-100 scale-100 group-hover:scale-110"
+            : "opacity-0 scale-105"
+          }`}
       />
     </div>
   );
@@ -131,7 +132,7 @@ const OliveHomes = () => {
     "/assets/home/CHB03874.webp",
   ];
 
-  const [visibleImageCount, setVisibleImageCount] = useState(8);
+  const [visibleImageCount, setVisibleImageCount] = useState(4);
 
   const handleInputChange = (
     e: React.ChangeEvent<
@@ -182,7 +183,9 @@ const OliveHomes = () => {
                     <img
                       src={category.image}
                       alt={category.title}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                      loading="lazy"
+                      decoding="async"
+                      className="w-full h-full object-cover transform-gpu group-hover:scale-110 transition-transform duration-500 will-change-transform"
                     />
                   </div>
                   <div className="p-8 flex-1 flex flex-col">
@@ -216,7 +219,7 @@ const OliveHomes = () => {
                         </div>
                       ))}
                     </div>
-                    <button
+                    {/* <button
                       className="w-full text-white py-3 rounded-lg font-semibold transition-colors flex items-center justify-center group"
                       style={{ backgroundColor: colors.primary }}
                       onMouseOver={(e) =>
@@ -229,7 +232,7 @@ const OliveHomes = () => {
                     >
                       Explore Collection
                       <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                    </button>
+                    </button> */}
                   </div>
                 </motion.div>
               );
@@ -263,7 +266,9 @@ const OliveHomes = () => {
                   <img
                     src={style.image}
                     alt={style.title}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                    loading="lazy"
+                    decoding="async"
+                    className="w-full h-full object-cover transform-gpu group-hover:scale-110 transition-transform duration-500 will-change-transform"
                   />
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
@@ -290,22 +295,18 @@ const OliveHomes = () => {
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             {homeAlbum.slice(0, visibleImageCount).map((src, index) => (
-              <motion.div
+              <div
                 key={src}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: (index % 4) * 0.1 }}
                 className="overflow-hidden rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 group cursor-pointer"
               >
                 <GalleryImage src={src} index={index} />
-              </motion.div>
+              </div>
             ))}
           </div>
           {visibleImageCount < homeAlbum.length && (
             <div className="mt-12 text-center">
               <button
-                onClick={() => setVisibleImageCount((prev) => prev + 8)}
+                onClick={() => setVisibleImageCount((prev) => prev + 4)}
                 className="px-8 py-3 rounded-lg font-semibold transition-colors duration-300 border-2"
                 style={{
                   borderColor: colors.primary,
@@ -397,7 +398,9 @@ const OliveHomes = () => {
                 <img
                   src={client.src}
                   alt={client.alt}
-                  className="h-28 md:h-36 w-auto object-contain transition-all duration-300"
+                  loading="lazy"
+                  decoding="async"
+                  className="h-28 md:h-36 w-auto object-contain transition-all duration-300 transform-gpu will-change-transform hover:scale-105"
                 />
               </motion.div>
             ))}

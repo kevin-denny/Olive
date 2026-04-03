@@ -26,8 +26,8 @@ const GalleryImage = ({ src, index }: { src: string; index: number }) => {
         decoding="async"
         onLoad={() => setIsLoaded(true)}
         className={`w-full h-full object-cover transform-gpu transition-all duration-700 ease-out will-change-transform ${isLoaded
-            ? "opacity-100 scale-100 group-hover:scale-110"
-            : "opacity-0 scale-105"
+          ? "opacity-100 scale-100 group-hover:scale-110"
+          : "opacity-0 scale-105"
           }`}
       />
     </div>
@@ -72,7 +72,7 @@ const OliveHomes = () => {
         "Premium cookware, dinnerware, and kitchen accessories for the modern home.",
       icon: Utensils,
       image:
-        "https://images.pexels.com/photos/1599791/pexels-photo-1599791.jpeg?auto=compress&cs=tinysrgb&w=800",
+        "https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=800",
       products: [
         "Cookware Sets",
         "Dinnerware",
@@ -290,7 +290,7 @@ const OliveHomes = () => {
               Our Gallery
             </h2>
             <p className="text-xl text-gray-600">
-              A glimpse into the stunning spaces we've created
+              A glimpse of the stunning pieces waiting for you at Olive Home
             </p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">

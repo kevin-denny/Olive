@@ -42,13 +42,13 @@ const Contact = () => {
     {
       icon: Mail,
       title: "Email",
-      details: ["olivemarketingint@gmail.com", "olivelandin@gmail.com"],
+      details: ["olivemarketingint@gmail.com", "olivelandsinc@gmail.com"],
       description: "We typically respond within 24 hours",
     },
     {
       icon: MapPin,
       title: "Address",
-      details: ["1 100, Colombo, Mahawewa", "No.76/A Puttalam - Colombo Rd, Negombo 61130"],
+      details: ["1 100, Colombo, Mahawewa", "No.76/A Colombo Rd, Negombo 61130"],
       description: "Visit our offices",
     },
     {
@@ -62,8 +62,8 @@ const Contact = () => {
   const divisionContacts = [
     {
       division: "Olive Automobile",
-      phone: "+94 77 772 2830 / +94 77 722 3143",
-      email: "olivelandin@gmail.com",
+      phone: "+94 77 772 2830",
+      email: "olivelandsinc@gmail.com",
       address: "1 100, Colombo, Mahawewa",
       color: "from-blue-600 to-blue-700",
     },
@@ -78,7 +78,7 @@ const Contact = () => {
       division: "Olive Home",
       phone: "+94 32 713 7197",
       email: "olivehomes@gmail.com",
-      address: "No.76/A Puttalam - Colombo Rd, Negombo 61130",
+      address: "No.76/A Colombo Rd, Negombo 61130",
       color: "from-amber-600 to-amber-700",
     },
   ];

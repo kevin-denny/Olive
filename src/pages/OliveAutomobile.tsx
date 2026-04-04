@@ -235,7 +235,7 @@ const OliveAutomobile = () => {
                   </div>
                   <div>
                     <p className="font-semibold">Phone</p>
-                    <p className="text-blue-100">+94 77 772 2830 / +94 77 722 3143</p>
+                    <p className="text-blue-100">+94 77 772 2830</p>
                   </div>
                 </div>
 
@@ -245,7 +245,7 @@ const OliveAutomobile = () => {
                   </div>
                   <div>
                     <p className="font-semibold">Email</p>
-                    <p className="text-blue-100">olivelandin@gmail.com</p>
+                    <p className="text-blue-100">olivelandsinc@gmail.com</p>
                   </div>
                 </div>
               </div>

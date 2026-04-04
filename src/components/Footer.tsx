@@ -121,7 +121,7 @@ const Footer = () => {
                   rel="noopener noreferrer"
                   className="text-gray-300 text-sm hover:underline"
                 >
-                  No.76/A Puttalam - Colombo Rd, Negombo 61130
+                  No.76/A Colombo Rd, Negombo 61130
                 </a>
               </div>
             </div>

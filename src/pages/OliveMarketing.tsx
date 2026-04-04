@@ -143,9 +143,8 @@ const OliveMarketing = () => {
                   initial={{ y: 50, opacity: 0 }}
                   animate={{ y: 0, opacity: 1 }}
                   transition={{ duration: 0.6, delay: index * 0.2 }}
-                  className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${
-                    index % 2 === 1 ? "lg:grid-flow-col-dense" : ""
-                  }`}
+                  className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? "lg:grid-flow-col-dense" : ""
+                    }`}
                 >
                   <div className={index % 2 === 1 ? "lg:col-start-2" : ""}>
                     <div className="flex items-center mb-6">
@@ -170,10 +169,10 @@ const OliveMarketing = () => {
                         </div>
                       ))}
                     </div>
-                    <button className="bg-green-500 hover:bg-green-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors flex items-center">
+                    {/* <button className="bg-green-500 hover:bg-green-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors flex items-center">
                       <Download className="w-5 h-5 mr-2" />
                       Download Brochure
-                    </button>
+                    </button> */}
                   </div>
                   <div className={index % 2 === 1 ? "lg:col-start-1" : ""}>
                     <img
@@ -190,7 +189,7 @@ const OliveMarketing = () => {
       </section>
 
       {/* Case Studies */}
-      <section className="py-20 bg-gray-50">
+      {/* <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-6">
@@ -233,7 +232,7 @@ const OliveMarketing = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Statistics */}
       <section className="py-20 bg-green-900 text-white">
@@ -245,11 +244,10 @@ const OliveMarketing = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               { icon: Users, number: "500+", label: "Industrial Clients" },
               { icon: Award, number: "95%", label: "Client Satisfaction" },
-              { icon: Target, number: "1000+", label: "Projects Completed" },
               { icon: Cog, number: "50+", label: "Product Categories" },
             ].map((stat, index) => {
               const IconComponent = stat.icon;
@@ -273,27 +271,6 @@ const OliveMarketing = () => {
         </div>
       </section>
 
-      {/* Contact Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold text-gray-900 mb-6">
-            Ready to Transform Your Operations?
-          </h2>
-          <p className="text-xl text-gray-600 mb-12">
-            Connect with our industrial solutions experts to discuss your
-            specific requirements and discover how we can help optimize your
-            business operations.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <button className="bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors">
-              Request Quote
-            </button>
-            <button className="border-2 border-green-500 text-green-500 hover:bg-green-500 hover:text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors">
-              Schedule Consultation
-            </button>
-          </div>
-        </div>
-      </section>
     </motion.div>
   );
 };

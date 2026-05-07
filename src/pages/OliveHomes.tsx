@@ -8,6 +8,8 @@ import {
   ArrowRight,
   Star,
   Send,
+  Phone,
+  Mail,
 } from "lucide-react";
 import logo from "/logo-homes.png";
 
@@ -533,6 +535,43 @@ const OliveHomes = () => {
           </motion.div>
         </div>
       </section> */}
+
+      {/* Contact Section */}
+      <section className="py-20 text-white" style={{ backgroundColor: colors.primary }}>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <div>
+              <h2 className="text-4xl font-bold mb-6">Get in Touch</h2>
+              <p className="text-xl text-white/90 mb-8">
+                Ready to transform your living space?
+                Contact our expert team today.
+              </p>
+
+              <div className="space-y-6">
+                <div className="flex items-center space-x-4">
+                  <div className="w-12 h-12 rounded-full flex items-center justify-center" style={{ backgroundColor: 'rgba(255,255,255,0.2)' }}>
+                    <Phone className="w-6 h-6" />
+                  </div>
+                  <div>
+                    <p className="font-semibold">Phone</p>
+                    <p className="text-white/90">+94 77 772 2830</p>
+                  </div>
+                </div>
+
+                <div className="flex items-center space-x-4">
+                  <div className="w-12 h-12 rounded-full flex items-center justify-center" style={{ backgroundColor: 'rgba(255,255,255,0.2)' }}>
+                    <Mail className="w-6 h-6" />
+                  </div>
+                  <div>
+                    <p className="font-semibold">Email</p>
+                    <p className="text-white/90">olivelandsinc@gmail.com</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </motion.div>
   );
 };

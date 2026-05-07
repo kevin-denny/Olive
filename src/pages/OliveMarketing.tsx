@@ -8,6 +8,8 @@ import {
   Award,
   Users,
   Target,
+  Phone,
+  Mail,
 } from "lucide-react";
 import logo from "/logo-marketing.png";
 
@@ -235,7 +237,7 @@ const OliveMarketing = () => {
       </section> */}
 
       {/* Statistics */}
-      <section className="py-20 bg-green-900 text-white">
+      {/* <section className="py-20 bg-green-900 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-6">Our Impact</h2>
@@ -269,8 +271,44 @@ const OliveMarketing = () => {
             })}
           </div>
         </div>
-      </section>
+      </section> */}
 
+      {/* Contact Section */}
+      <section className="py-20 bg-green-900 text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <div>
+              <h2 className="text-4xl font-bold mb-6">Get in Touch</h2>
+              <p className="text-xl text-green-100 mb-8">
+                Ready to optimize your industrial or commercial operations?
+                Contact our expert team today.
+              </p>
+
+              <div className="space-y-6">
+                <div className="flex items-center space-x-4">
+                  <div className="w-12 h-12 bg-green-700 rounded-full flex items-center justify-center">
+                    <Phone className="w-6 h-6" />
+                  </div>
+                  <div>
+                    <p className="font-semibold">Phone</p>
+                    <p className="text-green-100">+94 77 772 2830</p>
+                  </div>
+                </div>
+
+                <div className="flex items-center space-x-4">
+                  <div className="w-12 h-12 bg-green-700 rounded-full flex items-center justify-center">
+                    <Mail className="w-6 h-6" />
+                  </div>
+                  <div>
+                    <p className="font-semibold">Email</p>
+                    <p className="text-green-100">olivelandsinc@gmail.com</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </motion.div>
   );
 };
